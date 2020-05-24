@@ -1,6 +1,6 @@
 import pygame
 import math
-
+import sys
 BLUE = (0,0,255)
 BLACK = (0,0,0)
 RED = (255,0,0)
@@ -62,7 +62,8 @@ game_finished = False
 while not game_finished:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.QUIT
+            pygame.quit()
+            sys.exit()
 
         if event.type == pygame.MOUSEMOTION:
             pygame.draw.rect(screen, BLACK, (0, 0, WINDOW_WIDTH, CELL_SIZE))
